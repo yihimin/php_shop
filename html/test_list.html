@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>판매관리</title>
+    <link   href="css/bootstrap.min.css" rel="stylesheet">
+	<link  href="css/test.css" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		   <div class="container-fluid">
+			  <a class="navbar-brand" href="#">관리자</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+			data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="http://gamejigix.induk.ac.kr/~shop55/test_row.html">회원</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">제품</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">주문</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+							   role="button" data-bs-toggle="dropdown" aria-expanded="false">  
+							 기타
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Q&A</a></li>
+							<li><a class="dropdown-item" href="#">FAQ</a></li>
+							<li><a class="dropdown-item" href="#">옵션</a></li>
+						</ul>
+					</li>
+					</li>
+
+				 </ul>
+				 <a href="http://gamejigix.induk.ac.kr/~shop55/main.html" class="btn btn-sm btn-outline-info btn-dark">쇼핑몰 홈</a>
+			  </div>
+		</nav>
+		
+		<br>
+		<div class="alert  mycolor1" role="alert">회원</div>
+	
+		<form name="form1" method="post" action="" >
+		<div class="row">
+			<div class="col-3" align="left">            
+				<div class="input-group  input-group-sm">
+					<span class="input-group-text">이름</span>
+					<input type="text" name="text1" class="form-control" placeholder="이름을 입력해주세요">
+					<button class="btn mycolor1" type="button">검색</button>
+				</div>
+
+			</div>
+			<div class="col-9" align="right">           
+			   <a href="#" class="btn btn-sm mycolor1">추가</a>
+			</div>
+		</div>
+		</form>
+
+		<table class="table  table-bordered  table-sm  table-hover mymargin5">
+			<tr class="mycolor2">
+				<td width="10%">번호</td>
+				<td width="20%">아이디</td>
+				<td width="20%">암호</td>
+				<td width="20%">이름</td>
+				<td width="20%">전화</td>
+				<td width="10%">등급</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>admin1</td>
+				<td>1234</td>
+				<td>이희민</td>
+				<td>010-1111-1111</td>
+				<td>관리자</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>admin2</td>
+				<td>1234</td>
+				<td>이훗군</td>
+				<td>010-1111-1111</td>
+				<td>관리자</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>admin3</td>
+				<td>1234</td>
+				<td>육칠팔</td>
+				<td>010-1111-1111</td>
+				<td>관리자</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>admin4</td>
+				<td>1234</td>
+				<td>유사오</td>
+				<td>010-1111-1111</td>
+				<td>관리자</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>admin5</td>
+				<td>1234</td>
+				<td>김칠삼</td>
+				<td>010-1111-1111</td>
+				<td>관리자</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>admin6</td>
+				<td>1234</td>
+				<td>공일이</td>
+				<td>010-1111-1111</td>
+				<td>관리자</td>
+			</tr>
+		</table>
+
+		<nav aria-label="Page navigation example" >
+		  <ul class="pagination" style="justify-content: center;">
+			<li class="page-item"><a class="page-link" href="#">이전</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>			
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item"><a class="page-link" href="#">다음</a></li>
+		  </ul>
+		</nav>	
+		
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!---------------------------------------------------------------------------------------------
+	제목 : 내 손으로 만드는 PHP 쇼핑몰무 따라하기 (실습용 디자인 HTML)
+
+	소속 : 인덕대학교 컴퓨터소프트웨어학과
+	이름 : 교수 윤형태 (2024.02)
+---------------------------------------------------------------------------------------------->
+<!doctype html>
+<html lang="kr" style="overflow:hidden">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INDUK Mall</title>
+	<link  href="css/bootstrap.min.css" rel="stylesheet">
+	<link  href="css/my.css" rel="stylesheet">
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container-fulid">
+
+<!--  현재 페이지 자바스크립  -------------------------------------------->
+<script>
+	function SearchZip() 
+	{
+		if (!form.text1.value) 
+		{
+			alert("검색하실 도로명이나 건물명을 입력해 주십시오.");
+			form.text1.focus();
+			return;
+		}
+		form.submit();
+	}
+	
+	function SendZip(zip_kind) 
+	{
+		if (form1.jusor.value == "") {
+			alert("나머지 주소를 입력하여 주십시오.");
+			form1.jusor.focus();
+			return;
+		}
+		var str, zip, juso;
+		str = form1.post_no.value;
+
+		str = str.split("^^");
+		zip = str[0];
+		juso = str[1] + " " + form1.jusor.value;
+
+		if (zip_kind==1) {
+			opener.form2.o_zip.value = zip;
+			opener.form2.o_juso.value = juso;
+		} else if (zip_kind==2)	{
+			opener.form2.r_zip.value = zip;
+			opener.form2.r_juso.value = juso;
+		} else {
+			opener.form2.zip.value = zip;
+			opener.form2.juso.value = juso;
+		}
+
+		self.close();
+	}
+</script>
+
+<!--  페이지 제목 -->
+<div class="row m-0">
+	<div class="col bg-light" align="center">
+		<h4 class="m-2">우편번호 (Zipcode)</h4>
+	</div>	
+	<hr size="4px" class="my-0">
+</div>	
+
+<div class="row m-1 mb-0">
+	<div class="col" align="center">
+		<br>
+		<br>
+		<!--  form 시작 -->
+		<form  name="form" method="post" action="zipcode.html">
+		
+		<input type="hidden" name="zip_kind" value="0">
+
+		<div align="left">
+			<font size="2" color="#666666"><b>검색할 도로명이나 건물명 일부를 입력해 주세요</b></font>
+			<div class="d-inline-flex mt-1">
+				<div class="input-group input-group-sm">
+					<select name="sel" class="form-select form-select-sm bg-light" style="width:100px;font-size:13px">
+						<option value="1" selected>서울</option>
+						<option value="2">경기</option>
+						<option value="3">인천</option>
+						<option value="4">강원</option>
+						<option value="5">충북</option>
+						<option value="6">세종</option>
+						<option value="7">충남</option>
+						<option value="8">대전</option>
+						<option value="9">경북</option>
+						<option value="10">대구</option>
+						<option value="11">울산</option>
+						<option value="12">부산</option>
+						<option value="13">경남</option>
+						<option value="14">전북</option>
+						<option value="15">전남</option>
+						<option value="16">광주</option>
+						<option value="17">제주</option>
+					</select>				
+					<input type="text" name="text1" value="" class="form-control" style="width:150px;">
+					<a href="javascript:SearchZip()" class="btn btn-sm btn-outline-secondary" 
+						style="width:50px;font-size:13px">검색</a>
+				</div>
+			</div>
+		</div>
+		</form>
+		<br>
+		<form name="form1">
+		<div class="d-inline-flex w-100 mb-1">
+			<!-- 도로명 우편번호 인 경우 -->
+			<select name="post_no" class="form-select form-select-sm bg-light" style="font-size:13px">
+				<option value='13948^^서울특별시 노원구 초안산로2가길 9-13'>[13948] 서울특별시 노원구 초안산로2가길 9-13</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 15-11'>[13948] 서울특별시 노원구 초안산로2가길 15-11</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 5-11'>[13948] 서울특별시 노원구 초안산로2가길 5-11</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 25-17'>[13948] 서울특별시 노원구 초안산로2가길 25-17</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 25-19 성지독서실'>[13948] 서울특별시 노원구 초안산로2가길 25-19 성지독서실</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 9'>[13948] 서울특별시 노원구 초안산로2가길 9</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 5-5'>[13948] 서울특별시 노원구 초안산로2가길 5-5</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 5-10'>[13948] 서울특별시 노원구 초안산로2가길 5-10</option>
+				<option value='13948^^서울특별시 노원구 초안산로2가길 9-10'>[13948] 서울특별시 노원구 초안산로2가길 9-10</option>
+				<option value='13949^^서울특별시 노원구 초안산로 12 인덕대학교'>[13949] 서울특별시 노원구 초안산로 12 인덕대학</option>
+				<option value='13948^^서울특별시 노원구 초안산로 29 신계초등학교'>[13948] 서울특별시 노원구 초안산로 29 신계초등학교</option>
+				<option value='13948^^서울특별시 노원구 초안산로 7 월계2단지주공아파트'>[13948] 서울특별시 노원구 초안산로 7 월계2단지주공아파트</option>
+				<option value='13913^^서울특별시 노원구 초안산로 89 월계청백1단지아파트'>[13913] 서울특별시 노원구 초안산로 89 월계청백1단지아파트</option>
+				<option value='13948^^서울특별시 노원구 초안산로 2 월계2치안센터'>[13948] 서울특별시 노원구 초안산로 2 월계2치안센터</option>
+			</select>
+		</div>
+		<div class="d-inline-flex w-100 mb-2">
+			<input type="text" name="jusor" id="jusor" value="" 
+				class="form-control form-control-sm" style="font-size:13px">				
+		</div>
+		<font size="2" color="#666666"><b>나머지 주소를 입력해 주세요</b></font>
+		</form>
+		<br><br>
+
+		<!-- 회원가입/수정인 경우 : SendZip(0), 주문지인 경우 : SendZip(1), 배송지인 경우 : SendZip(2) -->
+		<a href="javascript:SendZip(0);" class="btn btn-sm btn-dark text-white myfont">확 인</a>
+
+	</div>
+</div>
+
+<!-------------------------------------------------------------------------------------------->	
+</div>
+
+</body>
+</html>

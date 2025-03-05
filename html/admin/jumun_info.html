@@ -1,0 +1,148 @@
+<!---------------------------------------------------------------------------------------------
+	제목 : 내 손으로 만드는 PHP 쇼핑몰 (실습용 디자인 HTML)
+
+	소속 : 인덕대학교 컴퓨터소프트웨어학과
+	이름 : 교수 윤형태 (2024.02)
+---------------------------------------------------------------------------------------------->
+<!doctype html>
+<html lang="kr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INDUK Mall</title>
+	<link  href="../css/bootstrap.min.css" rel="stylesheet">
+	<link  href="../css/my.css" rel="stylesheet">
+	<script src="..js/jquery-3.7.1.min.js"></script>
+	<script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/my.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!-------------------------------------------------------------------------------------------->	
+<script> document.write(admin_menu());</script>
+<!-------------------------------------------------------------------------------------------->	
+
+<div class="row mx-1 justify-content-center">
+	<div class="col-sm-10" align="center">
+
+	<h4 class="m-0 mb-3">주문 ( </b>240101004<b> )</h4>
+
+	<table class="table table-sm table-bordered mb-3">
+		<tr>
+			<td width="15%" class="bg-light">상태</td>
+			<td width="35%">주문신청</td>
+			<td width="15%" class="bg-light">주문일</td>
+			<td width="35%">2024-01-01</td>
+		</tr>
+	</table>
+
+	<table class="table table-sm table-bordered mb-2">
+		<tr>
+			<td width="15%" class="bg-light"><b>주문자</b></td>
+			<td width="35%">홍길동</td>
+			<td width="15%" class="bg-light">구분</td>
+			<td width="35%">비회원</td>
+		</tr>
+		<tr>
+			<td class="bg-light">전화</td><td>010-1234-1234</td>
+			<td class="bg-light">E-Mail</td><td>aaa@aa.com</td>
+		</tr>
+		<tr>
+			<td class="bg-light">주소</td>
+			<td align="left" colspan="3">&nbsp;(12312) 서울 노원구 초안산로길</td>
+		</tr>
+	</table>
+
+	<table class="table table-sm table-bordered mb-3">
+		<tr>
+			<td width="15%" class="bg-light"><b>수신자</b></td>
+			<td width="35%">홍길동</td>
+			<td width="15%" class="bg-light"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="bg-light">전화</td>
+			<td>010-1234-1234</td>
+			<td class="bg-light">E-Mail</td>
+			<td>aaa@aa.com</td>
+		</tr>
+		<tr>
+			<td class="bg-light">주소</td>
+			<td align="left" colspan="3">&nbsp;(12312) 서울 노원구 초안산로길</td>
+		</tr>
+		<tr height="50">
+			<td class="bg-light">메모</td>
+			<td align="left" valign="top" colspan="3">&nbsp;집에 없는 경우 수위실에 부탁.</td>
+		</tr>
+	</table>
+
+	<table class="table table-sm table-bordered mb-3">
+		<tr>
+			<td width="15%" class="bg-light"><b>카드</b></td>
+			<td width="35%">국민카드</td>
+			<td width="15%" class="bg-light">승인</td>
+			<td width="35%">12345678</td>
+		</tr>
+		<tr>
+			<td class="bg-light">할부</td><td>일시불</td>
+			<td class="bg-light"></td><td></td>
+		</tr>
+		<tr>
+			<td class="bg-light"><b>무통장</b></td><td>국민은행 : 123-12-12345</td>
+			<td class="bg-light">입금자</td><td>홍길동</td>
+		</tr>
+	</table>
+
+	<table class="table table-sm table-bordered mb-3">
+		<tr class="bg-light">
+			<td>제품명</td>
+			<td width="10%">수량</td>
+			<td width="10%">단가</td>
+			<td width="10%">금액</td>
+			<td width="10%">할인</td>
+			<td width="20%">옵션</td>
+		</tr>
+		<tr>
+			<td align="left">파란 브라우스</td>
+			<td>1</td>
+			<td align="right">20,000</td>
+			<td align="right">20,000</td>
+			<td>10%</td>
+			<td>파랑/Large</td>
+		</tr>
+		<tr>
+			<td align="left">티셔츠</td>
+			<td>1</td>
+			<td align="right">10,000</td>
+			<td align="right">10,000</td>
+			<td></td>
+			<td>흰색/Large</td>
+		</tr>
+		<tr>
+			<td align="left">택배비</td>
+			<td>1</td>
+			<td align="right">2,500</td>
+			<td align="right">2,500</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<table class="table table-sm table-bordered mb-3 p-2">
+		<tr>
+			<td width="15%" class="bg-light">총금액</td>
+			<td width="85%" align="right" style="font-size:18px"><b>32,500 원</b>&nbsp;</td>
+		</tr>
+	</table>
+
+	<a href="javascript:print();"  class="btn btn-sm btn-dark text-white my-2">&nbsp;프린트&nbsp;</a>&nbsp;
+	<a href="javascript:history.back();"  class="btn btn-sm btn-outline-dark my-2">&nbsp;돌아가기&nbsp;</a>
+
+	</div>
+</div>
+<!-------------------------------------------------------------------------------------------->	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!---------------------------------------------------------------------------------------------
+	제목 : PHP 쇼핑몰 실무 (실습용 디자인 HTML)
+
+	소속 : 인덕대학교 컴퓨터소프트웨어학과
+	이름 : 교수 윤형태 (2024.02)
+---------------------------------------------------------------------------------------------->
+<!doctype html>
+<html lang="kr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INDUK Mall</title>
+	<link  href="css/bootstrap.min.css" rel="stylesheet">
+	<link  href="css/my.css" rel="stylesheet">
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!-------------------------------------------------------------------------------------------->	
+
+<!--  Title과  메뉴(로그인/회원가입/장바구니/주문조회/게시판/Q&A) -->
+<div class="row">
+	<div class="col fs-3" align="left">
+		&nbsp;<a href="index.html"><font color="#777777">INDUK Mall</font></a>
+	</div>
+	<div class="col mt-3" align="right" style="font-size:12px;">
+		<a href="index.html">Home</a>&nbsp;|&nbsp;
+		<a href="member_login.html">Login</a>&nbsp;|&nbsp;
+		<a href="member_join.html">회원가입</a>&nbsp;|&nbsp;
+		<a href="cart.html">장바구니</a>&nbsp;|&nbsp; 
+		<a href="jumun_login.html">주문조회</a>&nbsp;|&nbsp;
+		<a href="qa.html">Q & A</a>&nbsp;|&nbsp;
+		<a href="faq.html">FAQ</a>&nbsp;&nbsp;
+	</div>
+</div>
+
+<!-- Slide Images -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="4000">
+	<div class="carousel-indicators">
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1"	class="active" aria-current="true" ></button>
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+	</div>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="images/main1.jpg" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h1>New Fashion 1</h1>
+				<p><h6>당신을 위한 패션 제안 1</h6></p>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="images/main2.jpg" class="d-block w-100"alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h1>New Fashion 2</h1>
+				<p><h6>당신을 위한 패션 제안 2</h6></p>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="images/main3.jpg" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h1>New Fashion 3</h1>
+				<p><h6>당신을 위한 패션 제안 3</h6></p>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="images/main4.jpg" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h1>New Fashion 4</h1>
+				<p><h6>당신을 위한 패션 제안 4</h6></p>
+			</div>
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+<!--  상품 Category 메뉴/ 상품검색 -->
+<div class="row bg-light m-0 p-1 fs-6 border">
+	<div class="col">
+		<div class="d-flex">
+			<ul class="nav me-auto">
+				<li class="nav-item zoom_a"><a class="nav-link" href="menu.html?menu=1"> Menu1 </a></li>
+				<li class="nav-item zoom_a"><a class="nav-link" href="menu.html?menu=2"> Menu2 </a></li>
+				<li class="nav-item zoom_a"><a class="nav-link" href="menu.html?menu=3"> Menu3 </a></li>
+				<li class="nav-item zoom_a"><a class="nav-link" href="menu.html?menu=4"> Menu4 </a></li>
+				<li class="nav-item zoom_a"><a class="nav-link" href="menu.html?menu=5"> Menu5 </a></li>
+				<li class="nav-item zoom_a"><a class="nav-link" href="menu.html?menu=6"> Menu6 </a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="menu.html?menu=8" role="button" aria-expanded="false"> Menu7 </a>
+					<ul class="dropdown-menu">
+						<li class="nav-item zoom_a"><a class="dropdown-item" href="#">SMenu1</a></li>
+						<li class="nav-item zoom_a"><a class="dropdown-item" href="#">SMenu2</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li class="nav-item zoom_a"><a class="dropdown-item" href="#">SMenu3</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<script>
+				function check_findproduct() {
+					if (!form1.find_text.value)  {
+						alert('검색어를 입력하세요');
+						return;
+					}
+					form1.submit();
+				}
+			</script>
+
+			<form name="form1" method="post" action="product_search.php">
+				<div class="input-group input-group-sm pt-1" >
+					<span  class="input-group-text" style="font-size:13px;">상품검색</span>
+					<input type="text" name="find_text" value="" size="10" class="form-control form-control-sm">
+					<button type="button" class="btn btn-sm btn-outline-secondary" style="font-size:13px;" 
+						onClick="check_findproduct();">Search</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<!-------------------------------------------------------------------------------------------->	
+<!-- 시작 : 다른 웹페이지 삽입할 부분 -->
+<!-------------------------------------------------------------------------------------------->	
+
+<script>
+	function Check_Value() 
+	{
+		if (form2.pay_kind[0].checked)
+		{
+			if (form2.card_kind.value==0) {
+				alert("카드종류를 선택하세요.");	form2.card_kind.focus();	return;
+			}
+			if (!form2.card_no1.value) {
+				alert("카드번호를 입력하세요.");	form2.card_no1.focus();	return;
+			}
+			if (!form2.card_no2.value) {
+				alert("카드번호를 입력하세요.");	form2.card_no2.focus();	return;
+			}
+			if (!form2.card_no3.value) {
+				alert("카드번호를 입력하세요.");	form2.card_no3.focus();	return;
+			}
+			if (!form2.card_no4.value) {
+				alert("카드번호를 입력하세요.");	form2.card_no4.focus();	return;
+			}
+			if (!form2.card_month.value) {
+				alert("카드기간 월을 입력하세요.");	form2.card_month.focus();	return;
+			}
+			if (!form2.card_year.value) {
+				alert("카드기간 년도를 입력하세요.");	form2.card_year.focus();	return;
+			}
+			if (!form2.card_pw.value) {
+				alert("카드 비밀번호 뒷의 2자리를 입력하세요.");	form2.card_pw.focus();	return;
+			}
+		}
+		else
+		{
+			if (form2.bank_kind.value==0) {
+				alert("입금할 은행을 선택하세요.");	form2.bank_kind.focus();	return;
+			}
+			if (!form2.bank_sender.value) {
+				alert("입금자 이름을 입력하세요.");	form2.bank_sender.focus();	return;
+			}
+		}
+		form2.card_kind.disabled = false;
+		form2.card_no1.disabled = false;
+		form2.card_no2.disabled = false;
+		form2.card_no3.disabled = false;
+		form2.card_no4.disabled = false;
+		form2.card_year.disabled = false;
+		form2.card_month.disabled = false;
+		form2.card_pw.disabled = false;
+		form2.card_halbu.disabled = false;
+		form2.bank_kind.disabled = false;
+		form2.bank_sender.disabled = false;
+		
+		form2.submit();
+	}
+
+	function PaySel(n) 
+	{
+		if (n == 0) {
+			form2.card_kind.disabled = false;
+			form2.card_no1.disabled = false;
+			form2.card_no2.disabled = false;
+			form2.card_no3.disabled = false;
+			form2.card_no4.disabled = false;
+			form2.card_year.disabled = false;
+			form2.card_month.disabled = false;
+			form2.card_halbu.disabled = false;
+			form2.card_pw.disabled = false;
+			form2.bank_kind.disabled = true;
+			form2.bank_sender.disabled = true;
+		}
+		else {
+			form2.card_kind.disabled = true;
+			form2.card_no1.disabled = true;
+			form2.card_no2.disabled = true;
+			form2.card_no3.disabled = true;
+			form2.card_no4.disabled = true;
+			form2.card_year.disabled = true;
+			form2.card_month.disabled = true;
+			form2.card_halbu.disabled = true;
+			form2.card_pw.disabled = true;
+			form2.bank_kind.disabled = false;
+			form2.bank_sender.disabled = false;
+		}
+	}
+</script>
+
+<div class="row m-1 mb-0">
+	<div class="col" align="center">
+
+		<h4 class="m-3">주문(결제정보)</h4>
+		<hr class="m-0">
+		
+		<table class="table table-sm mb-5">
+			<tr height="40" class="bg-light">
+				<td width="15%">이미지</td>
+				<td width="35%">상품정보</td>
+				<td width="15%">판매가</td>
+				<td width="20%">수량</td>
+				<td width="15%">금액</td>
+			</tr>
+			<tr height="85" style="font-size:14px;">
+				<td>
+					<a href="product.html?id=1001"><img src="product/p1.png" width="60" height="70"></a>
+				</td>
+				<td align="left" valign="middle">
+					<a href="product.html?id=1001" style="color:#0066CC">제품명1</a><br>
+					<small><b>[옵션]</b> 아이보리 &nbsp; Large</small>
+				</td>
+				<td>80,000</td>
+				<td>1</td>
+				<td>80,000</td>
+			</tr>
+			<tr height="85" style="font-size:14px;">
+				<td>
+					<a href="product.html?id=1002"><img src="product/p2.png" width="60" height="70"></a>
+				</td>
+				<td align="left" valign="middle">
+					<a href="product.html?id=1002" style="color:#0066CC">제품명2</a><br>
+					<small><b>[옵션]</b> 흰색 &nbsp; Medium</small>
+				</td>
+				<td>45,000</td>
+				<td>2</td>
+				<td>90,000</td>
+			</tr>
+			<tr height="40" align="right" class="bg-light" style="font-size:14px;">
+				<td width="10%" align="center"><img src="images/cart_image1.gif" border="0"></td>
+				<td width="90%" colspan="5" class="pe-4">
+					<font color="#0066CC">총금액</font> : 상품( 170,000 ) + 배송비( 2,500 ) = <font style="font-size:16px"><b>172,500</b></font>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<!-- form2 시작 -->
+<form name="form2" method="post" action="order_ok.html">
+
+<input type="hidden" name="o_name"	value="홍길동">
+<input type="hidden" name="o_tel"		value="010222 2222">
+<input type="hidden" name="o_email"	value="aaa@aa.aa.aa">
+<input type="hidden" name="o_zip"		value="11111">
+<input type="hidden" name="o_juso"	value="서울 노원구 초안산로 12 인덕대학교 컴소과">
+
+<input type="hidden" name="r_name"	value="홍길동">
+<input type="hidden" name="r_tel"		value="010222 2222">
+<input type="hidden" name="r_email"	value="aaa@aa.aa.aa">
+<input type="hidden" name="r_zip"		value="11111">
+<input type="hidden" name="r_juso"		value="서울 노원구 초안산로 12 인덕대학교 컴소과">
+<input type="hidden" name="memo"	value="빠른 배송 부탁.">
+
+<div class="row mx-1 my-0">
+	<div class="col" align="center">
+
+		<font size="4" color="#B90319">결제방법</font>
+		<hr class="m-0 my-2">
+					
+		<table width="90%" style="font-size:13px;">
+			<tr height="40">
+				<td width="40%" align="right" class="pe-4">결제선택</td>
+				<td align="left">
+					<div class="d-inline-flex mt-2">
+						<div class="form-check me-2">
+							<input class="form-check-input" type="radio" name="pay_kind" value="0" 
+								onclick="javascript:PaySel(0);" checked>
+							<label class="form-check-label me-2">카드</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="pay_kind" value="1" 
+								onclick="javascript:PaySel(1);">
+							<label class="form-check-label">무통장</label>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		
+		<font size="4" color="#B90319">카드</font>
+		<hr class="m-0 my-2">
+		
+		<table width="90%" style="font-size:13px;">
+			<tr height="40">
+				<td  width="40%" align="right" class="pe-4">카드종류</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<select name="card_kind" class="form-select form-select-sm myfs13">
+							<option value="0" selected>카드종류를 선택하세요.</option>
+							<option value="1">국민카드</option>
+							<option value="2">신한카드</option>
+							<option value="3">우리카드</option>
+							<option value="4">하나카드</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr height="40">
+				<td align="right" align="right" class="pe-4">카드번호</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<input type="text" name="card_no1" size="4" maxlength="4" value="" 
+							class="form-control form-control-sm">&nbsp;
+						<input type="text" name="card_no2" size="4" maxlength="4" value="" 
+							class="form-control form-control-sm">&nbsp;
+						<input type="text" name="card_no3" size="4" maxlength="4" value="" 
+							class="form-control form-control-sm">&nbsp;
+						<input type="text" name="card_no4" size="4" maxlength="4" value="" 
+							class="form-control form-control-sm">
+					</div>
+				</td>
+			</tr>
+			<tr height="40">
+				<td align="right" align="right" class="pe-4">카드기간</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<input type="text" name="card_month" size="2" maxlength="2" value="" 
+							class="form-control form-control-sm">
+						<div class="ms-1 mt-2">월</div>&nbsp;&nbsp;
+						<input type="text" name="card_year" size="2" maxlength="2" value="" 
+							class="form-control form-control-sm">
+						<div class="ms-1 mt-2">년</div>
+					</div>
+				</td>
+			</tr>
+			<tr height="40">
+				<td align="right" align="right" class="pe-4">카드비밀번호</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<div class="mt-2 fs-6">**</div>&nbsp;
+						<input type="password" name="card_pw" size="2" maxlength="2" value="" 
+							class="form-control form-control-sm">
+					</div>
+				</td>
+			</tr>
+			<tr height="40">
+				<td align="right" align="right" class="pe-4">할부</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<select name="card_halbu" class="form-select form-select-sm myfs13">
+							<option value="0" selected>일시불</option>
+							<option value="3">3 개월</option>
+							<option value="6">6 개월</option>
+							<option value="9">9 개월</option>
+							<option value="12">12 개월</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+		</table>
+				
+		<br><br>
+		<font size="4" color="#B90319">무통장</font>
+		<hr class="m-0 my-2">
+		
+		<table width="90%" style="font-size:13px;">
+			<tr height="40">
+				<td width="40%" align="right" class="pe-4">카드종류</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<select name="bank_kind" class="form-select form-select-sm myfs13"  disabled>
+							<option value="0" selected>입금할 은행을 선택하세요.</option>
+							<option value="1">국민은행 111-00000-0000</option>
+							<option value="2">신한은행 222-00000-0000</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr height="40">
+				<td align="right" class="pe-4">입금자이름</td>
+				<td align="left">
+					<div class="d-inline-flex">
+						<input type="text" name="bank_sender" size="20" value="" 
+							class="form-control form-control-sm" disabled>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+<div>
+<br>
+
+<div class="row">
+	<div class="col" align="center">
+		<a href="javascript:Check_Value()"  class="btn btn-sm btn-dark text-white">&nbsp;결제하기&nbsp;</a>
+	</div>
+</div>
+
+</form>
+
+<br><br><br>
+
+<!-------------------------------------------------------------------------------------------->	
+<!-- 끝 : 다른 웹페이지 삽입할 부분 -->
+<!-------------------------------------------------------------------------------------------->	
+
+<!-- 화면 하단 (main_bottom) : 회사소개/이용안내/개인보호정책 -->
+<hr class="m-0">
+<div class="row bg-light py-3  m-0 mb-5">
+	<div class="col-2" align="center">
+		<a href="index.html"><img src="images/footer_logo.png" width="120" class="img-fluid"></a>
+	</div>
+	<div class="col-7" align="left" style="line-height:15px;">
+
+		<h6><b>INDUK Mall</b></h6>
+		<font style="font-size:12px;">
+			상호: 인덕주식회사 | 대표 : 홍길동 | 사업자 등록번호 : 123-12-123345<br>
+			주소 : 21424 서울 노원구 초안산로 인덕대학교  | 전화 : 010-1111-2222 | Fax : 02-3333-4444<br>
+			개인정보관리책임자 : 홍길동 | 이메일 : honggd@induk.ac.kr<br>
+			<br>
+			Copyright © 2024 www.induk.ac.kr &nbsp; All Rights Reserved.
+		</font>
+	</div>
+	<div class="col-3" align="center" style="font-size:12px;">
+		<a href="company.html">회사소개</a>&nbsp; |&nbsp;
+		<a href="useinfo.html">이용안내</a>&nbsp; |&nbsp;
+		<a href="policy.html">개인정보정책</a>&nbsp; |&nbsp;
+		<a href="admin/index.html"><b>Admin</b></a></td>
+		<br><br>
+		<a href="http://www.ftc.go.kr/"><img src="images/footer_pic1.gif" border="0" class="img-fluid mb-2"></a>
+		<a href="http://www.sgic.co.kr/"><img src="images/footer_pic2.gif" border="0" class="img-fluid mb-2"></a>
+	</div>
+</div>
+<br>
+
+<!-------------------------------------------------------------------------------------------->	
+</div>
+
+</body>
+</html>

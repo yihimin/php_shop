@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>판매관리</title>
+    <link   href="css/bootstrap.min.css" rel="stylesheet">
+	<link  href="css/test.css" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		   <div class="container-fluid">
+			  <a class="navbar-brand" href="http://gamejigix.induk.ac.kr/~shop55/test_list.html">관리자</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+			data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="http://gamejigix.induk.ac.kr/~shop55/test_row.html">회원</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">제품</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">주문</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+							   role="button" data-bs-toggle="dropdown" aria-expanded="false">  
+							 기타
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Q&A</a></li>
+							<li><a class="dropdown-item" href="#">FAQ</a></li>
+							<li><a class="dropdown-item" href="#">옵션</a></li>
+						</ul>
+					</li>
+					</li>
+
+				 </ul>
+				 <a href="http://gamejigix.induk.ac.kr/~shop55/main.html" class="btn btn-sm btn-outline-info btn-dark">쇼핑몰 홈</a>
+			  </div>
+		</nav>
+		
+		<br>
+		<div class="alert  mycolor1" role="alert">회원</div>
+	
+		<form name="form1" method="post" action="" >
+		<div class="row">
+			<div class="col-3" align="left">            
+				<div class="input-group  input-group-sm">
+					<span class="input-group-text">이름</span>
+					<input type="text" name="text1" class="form-control" placeholder="찾을 이름?">
+					<button class="btn mycolor1" type="button">검색</button>
+				</div>
+
+			</div>
+			<div class="col-9" align="right">           
+			   <a href="#" class="btn btn-sm mycolor1">추가</a>
+			</div>
+		</div>
+		</form>
+
+		<form name="form1" method="post" action="">
+			<table class="table table-bordered table-sm mymargin5">
+				<tr>
+					<td width="20%" height="40" class="mycolor2"> 번호</td>
+					<td width="80%" align="left">1</td>
+				</tr>
+				<tr>
+					<td width="20%" class="mycolor2"><font color="red">*</font> 이름</td>
+					<td width="80%" align="left">
+						<div class="d-inline-flex">
+							<input size="20" maxlength="20" value="이희민" type="text" name="name" class="form-control form-control-sm" >
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="mycolor2"><font color="red">*</font> 아이디</td>
+					<td align="left">
+						<div class="d-inline-flex">
+							<input size="20" maxlength="20" value="admin" type="text" name="uid" class="form-control form-control-sm" >
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="mycolor2"><font color="red">*</font> 암호</td>
+					<td align="left">
+						<div class="d-inline-flex">
+							<input size="20" maxlength="20" type="text" name="pwd" value="1234" class="form-control form-control-sm" … >
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="mycolor2"></font> 전화</td>
+					<td align="left">
+						<div class="d-inline-flex">
+							<input size="3" maxlength="3" type="text" name="tel1" value="010" class="form-control form-control-sm">-
+							<input size="4" maxlength="4" type="text" name="tel2" value="1111" class="form-control form-control-sm">-
+							<input size="4" maxlength="4" type="text" name="tel3" value="1111" class="form-control form-control-sm" >
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="mycolor2"></font> 등급</td>
+					<td align="left">
+						<div class="d-inline-flex">
+							<input type="radio" name="rank" value="0" checked>&nbsp;직원&nbsp;&nbsp;
+							<input type="radio" name="rank" value="1">&nbsp;관리자
+						</div>
+				</td>
+				</tr>
+			</table>
+			<div align="center">
+				<a href="#" class="btn btn-sm mycolor1">수정</a>&nbsp;
+				<a href="#" class="btn btn-sm mycolor1" onclick="return confirm('삭제할까요 ?');">삭제</a>&nbsp;
+				<input size="3" type="submit" value="저장" class="btn btn-sm mycolor1">&nbsp;
+				<input size="6" type="button" value="이전화면" class="btn btn-sm mycolor1" onClick="history.back();">
+			</div>
+		</form>
+	</div>
+	</body>
+	</html>
+	

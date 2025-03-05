@@ -1,0 +1,223 @@
+<!---------------------------------------------------------------------------------------------
+	제목 : 내 손으로 만드는 PHP 쇼핑몰 (실습용 디자인 HTML)
+
+	소속 : 인덕대학교 컴퓨터소프트웨어학과
+	이름 : 교수 윤형태 (2024.02)
+---------------------------------------------------------------------------------------------->
+<!doctype html>
+<html lang="kr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Life with Dog</title>
+	<link  href="../css/bootstrap.min.css" rel="stylesheet">
+	<link  href="../css/my.css" rel="stylesheet">
+	<script src="..js/jquery-3.7.1.min.js"></script>
+	<script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/my.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!-------------------------------------------------------------------------------------------->	
+<script> document.write(admin_menu());</script>
+<!-------------------------------------------------------------------------------------------->	
+
+<script>
+	function go_update(id,pos)
+	{
+		state=form1.state[pos].value;
+		location.href="jumun_update.html?id="+id+"&state="+state+"&page="+form1.page.value+
+			"&sel1="+form1.sel1.value+"&sel2="+form1.sel2.value+"&text1="+form1.text1.value+
+			"&day1="+form1.day1.value+"&day2="+form1.day2.value;
+	}
+</script>
+
+<div class="row mx-1 justify-content-center">
+	<div class="col" align="center">
+
+		<h4 class="m-0 mb-3">주문</h4>
+
+		<form name="form1" method="post" action="jumun.html">
+		
+		<table class="table table-sm table-borderless m-0 p-0">
+			<tr>
+				<td width="20%" align="left" style="padding-top:8px">
+					주문수 : <font color="red">3</font>
+				</td>
+				<td align="right">
+				
+					기간:
+					<div class="d-inline-flex">
+						<input type="date" name="day1" value="2024-01-01" 
+							class="form-control form-control-sm"  style="width:120px" >~
+						<input type="date" name="day2" value="2024-02-01" 
+							class="form-control form-control-sm" style="width:120px" >
+					</div>
+					<div class="d-inline-flex">
+						<select name="sel1" class="form-select form-select-sm bg-light myfs12" style="width:100px">				
+							<option value="0" selected>전체</option>
+							<option value="1">주문신청</option>
+							<option value="2">주문확인</option>
+							<option value="3">입금확인</option>
+							<option value="4">배달중</option>
+							<option value="5">주문완료</option>
+							<option value="6">주문취소</option>
+						</select>&nbsp;
+						<select name="sel2" class="form-select bg-light myfs12" style="width:105px">
+							<option value="1" selected>주문번호</option>
+							<option value="2">고객명</option>
+							<option value="3">상품명</option>
+						</select>
+					</div>
+					<div class="d-inline-flex">
+						<div class="input-group input-group-sm">
+							<input type="text" name="text1" value="" 
+								class="form-control myfs12" style="width:100px" 
+								onKeydown="if (event.keyCode == 13) { form1.submit(); }"> 
+							<button class="btn mycolor1 myfs12" type="button" 
+								onClick="form1.submit();">검색</button>
+						</div>
+					</div>
+					
+				</td>
+			</tr>
+		</table>
+		
+		<table class="table table-sm table-bordered table-hover my-1">
+			<tr class="bg-light">
+				<td >주문번호</td>
+				<td >주문일</td>
+				<td >제품명</td>
+				<td width="5%">제품수</td>
+				<td>금액</td>
+				<td>주문자</td>
+				<td width="5%">결제</td>
+				<td width="25%">주문상태</td>
+				<td width="5%">삭제</td>
+			</tr>
+			<tr>
+				<td class="mywordwrap">
+					<a href="jumun_info.html?id=0803050004" style="color:#0085dd">2203050004</a>
+				</td>
+				<td>2024-01-05</td>
+				<td align="left" class="mywordwrap">파란 브라우스 외 1</td>	
+				<td>2</td>	
+				<td align="right" class="mywordwrap">35,000</td>	
+				<td>홍길동</td>	
+				<td>카드</td>	
+				<td>
+					<div class="d-sm-inline-flex">
+						<select name="state" class="form-select form-select-sm myfs12 me-1" style="color:black">
+							<option value="1" selected>주문신청</option>
+							<option value="2">주문확인</option>
+							<option value="3">입금확인</option>
+							<option value="4">배송중</option>
+							<option value="5">주문완료</option>
+							<option value="6">주문취소</option>
+						</select>
+						<a href="javascript:go_update('2203050004',0);" 
+							class="btn btn-sm mybutton-blue" style="width:50px;">수정</a>
+					</div>
+				</td>
+				<td>
+					<a href="jumun_delete.html?id=2203050004" 
+						class="btn btn-sm mybutton-red" 
+						onclick="javascript:return confirm('삭제할까요 ?');">삭제</a>				
+				</td>
+			</tr>
+			<tr>
+				<td class="mywordwrap">
+					<a href="jumun_info.html?id=0803050002" style="color:#0085dd">2203030002</a>
+				</td>
+				<td>2024-01-03</td>
+				<td align="left" class="mywordwrap">실크 브라우스</td>	
+				<td>1</td>	
+				<td align="right" class="mywordwrap">120,000</td>	
+				<td>이길동</td>	
+				<td>무통장</td>	
+				<td>
+					<div class="d-sm-inline-flex">
+						<select name="state" class="form-select form-select-sm myfs12 me-1" style="color:blue">
+							<option value="1">주문신청</option>
+							<option value="2">주문확인</option>
+							<option value="3">입금확인</option>
+							<option value="4">배송중</option>
+							<option value="5" selected>주문완료</option>
+							<option value="6">주문취소</option>
+						</select>
+						<a href="javascript:go_update('2203030002',1);" 
+							class="btn btn-sm mybutton-blue" style="width:50px;">수정</a>
+					</div>
+				</td>
+				<td>
+					<a href="jumun_delete.html?id=2203030002" 
+						class="btn btn-sm mybutton-red" 
+						onclick="javascript:return confirm('삭제할까요 ?');">삭제</a>				
+				</td>
+			</tr>
+			<tr>
+				<td class="mywordwrap">
+					<a href="jumun_info.html?id=0803010002" style="color:#0085dd">2203010002</a>
+				</td>
+				<td>2024-01-01</td>
+				<td align="left" class="mywordwrap">코트</td>	
+				<td>1</td>	
+				<td align="right" class="mywordwrap">155,000</td>	
+				<td>김미자</td>	
+				<td>카드</td>	
+				<td>
+					<div class="d-sm-inline-flex">
+						<select name="state" class="form-select form-select-sm myfs12 me-1" style="color:red">
+							<option value="1">주문신청</option>
+							<option value="2">주문확인</option>
+							<option value="3">입금확인</option>
+							<option value="4">배송중</option>
+							<option value="5">주문완료</option>
+							<option value="6" selected>주문취소</option>
+						</select>
+						<a href="javascript:go_update('2203010002',2);" 
+							class="btn btn-sm mybutton-blue" style="width:50px;">수정</a>
+					</div>
+				</td>
+				<td>
+					<a href="jumun_delete.html?id=2203010002" 
+						class="btn btn-sm mybutton-red" 
+						onclick="javascript:return confirm('삭제할까요 ?');">삭제</a>				
+				</td>
+			</tr>
+		</table>
+
+		<input type="hidden" name="state">	
+		
+		</form>
+
+		<nav aria-label="Page navigation example">
+			<ul class="pagination pagination-sm justify-content-center my-3">
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">◁</span>
+					</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="jumun.html?page=1&sel1=&sel2=&text1=&day1=&day2=">1</a></li>
+				<li class="page-item active" aria-current="page">
+					<span class="page-link mycolor1">2</span>
+				</li>
+				<li class="page-item"><a class="page-link" href="jumun.html?page=3&sel1=&sel2=&text1=&day1=&day2=">3</a></li>
+				<li class="page-item"><a class="page-link" href="jumun.html?page=4&sel1=&sel2=&text1=&day1=&day2=">4</a></li>
+				<li class="page-item"><a class="page-link" href="jumun.html?page=5&sel1=&sel2=&text1=&day1=&day2=">5</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">▷</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+</div>
+<!-------------------------------------------------------------------------------------------->	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+<!-------------------------------------------------------------------------------------------->	
+<!-- 시작 : 다른 웹페이지 삽입할 부분 -->
+<!-------------------------------------------------------------------------------------------->	
+
+<div class="row m-1 mb-0 justify-content-center">
+	<div class="col" align="center">
+
+		<h4 class="mt-5 mb-3">Q & A</h4>
+	
+		<hr class="my-0">
+		<table class="table table-sm m-0">
+			<tr height="35" class="bg-light">
+				<td width="10%">번호</td>
+				<td width="45%">제목</td>
+				<td width="15%">작성자</td>
+				<td width="20%">작성일</td>
+				<td width="10%">조회</td>
+			</tr>
+			<tr height="35">
+				<td>3</td>
+				<td align="left">
+					<a href="qa_read.html?id=3&page=1&sel1=1&text1=" style="color:#0066CC">새소식3</a><br>
+				</td>
+				<td>홍길동</td>
+				<td>2022-02-02</td>
+				<td>32</td>
+			</tr>
+			<tr height="35">
+				<td>4</td>
+				<td align="left">
+					<img src="images/i_re.gif" border="0">&nbsp;
+					<a href="qa_read.html?id=4&page=1&sel1=1&text1="><font color="#4186C7">Re:새소식3</font></a>
+				</td>	
+				</td>
+				<td>박나리</td>
+				<td>2022-02-05</td>
+				<td>16</td>
+			</tr>
+			<tr height="35">
+				<td>5</td>
+				<td align="left">
+					&nbsp;&nbsp;<img src="images/i_re.gif" border="0">&nbsp;
+					<a href="qa_read.html?id=5&page=1&sel1=1&text1="><font color="#4186C7">Re:새소식3</font></a>
+				</td>	
+				</td>
+				<td>이길동</td>
+				<td>2022-02-06</td>
+				<td>14</td>
+			</tr>
+			<tr height="35">
+				<td>2</td>
+				<td align="left">
+					<a href="qa_read.html?id=2&page=1&sel1=1&text1=" style="color:#0066CC">새소식2</a><br>
+				</td>
+				<td>박인규</td>
+				<td>2022-02-01</td>
+				<td>23</td>
+			</tr>
+			<tr height="35">
+				<td>1</td>
+				<td align="left">
+					<a href="product.html?id=1001" style="color:#0066CC">새소식1</a><br>
+				</td>
+				<td>이미자</td>
+				<td>2022-02-01</td>
+				<td>43</td>
+			</tr>
+			<tr height="35">
+				<td></td>
+				<td align="left"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr height="35">
+				<td></td>
+				<td align="left"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<table class="table table-sm table-borderless mt-1 m-0">
+			<tr>
+				<td align="left">
+					<form name="form2" method="post" action="qa.html">
+						<div class="d-inline-flex">
+							<div class="input-group input-group-sm">
+								<span class="input-group-text myfs13">제목+내용</span>
+								<input type="text" name="text1" size="10" value=""
+									class="form-control bg-light myfs13">
+								<button type="button" class="btn btn-sm btn-outline-secondary myfs13" 
+									onClick="form2.submit();">검색</button>&nbsp;
+							</div>
+						</div>
+					</form>
+				</td>
+				<td align="right">
+					<a href="qa_new.html" class="btn btn-sm btn-dark text-white myfs13">새글</a>&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+	
+	</div>
+</div>
+
+<!--  Pagination -->
+<nav aria-label="Page navigation example">
+	<ul class="pagination pagination-sm justify-content-center">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="First">
+				<span aria-hidden="true">◀</span>
+			</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">◁</span>
+			</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item active" aria-current="page">
+			<span class="page-link mycolor1">2</span>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">▷</span>
+			</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Last">
+				<span aria-hidden="true">▶</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<br><br><br>
+
+<!-------------------------------------------------------------------------------------------->	
+<!-- 끝 : 다른 웹페이지 삽입할 부분 -->
+<!-------------------------------------------------------------------------------------------->	
+
+<!-- 화면 하단 (main_bottom) : 회사소개/이용안내/개인보호정책 -->
+<hr class="m-0">
+<div class="row bg-light py-3  m-0 mb-5">
+	<div class="col-2" align="center">
+		<a href="index.html"><img src="images/footer_logo.png" width="120" class="img-fluid"></a>
+	</div>
+	<div class="col-7" align="left" style="line-height:15px;">
+
+		<h6><b>INDUK Mall</b></h6>
+		<font style="font-size:12px;">
+			상호: 인덕주식회사 | 대표 : 홍길동 | 사업자 등록번호 : 123-12-123345<br>
+			주소 : 21424 서울 노원구 초안산로 인덕대학교  | 전화 : 010-1111-2222 | Fax : 02-3333-4444<br>
+			개인정보관리책임자 : 홍길동 | 이메일 : honggd@induk.ac.kr<br>
+			<br>
+			Copyright © 2024 www.induk.ac.kr &nbsp; All Rights Reserved.
+		</font>
+	</div>
+	<div class="col-3" align="center" style="font-size:12px;">
+		<a href="company.html">회사소개</a>&nbsp; |&nbsp;
+		<a href="useinfo.html">이용안내</a>&nbsp; |&nbsp;
+		<a href="policy.html">개인정보정책</a>&nbsp; |&nbsp;
+		<a href="admin/index.html"><b>Admin</b></a></td>
+		<br><br>
+		<a href="http://www.ftc.go.kr/"><img src="images/footer_pic1.gif" border="0" class="img-fluid mb-2"></a>
+		<a href="http://www.sgic.co.kr/"><img src="images/footer_pic2.gif" border="0" class="img-fluid mb-2"></a>
+	</div>
+</div>
+<br>
+
+<!-------------------------------------------------------------------------------------------->	
+</div>
+
+</body>
+</html>
